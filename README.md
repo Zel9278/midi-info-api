@@ -34,9 +34,16 @@ api->release(an);                            // 必ず解放
 
 [xmake](https://xmake.io) と AviUtl2 SDK（`filter2.h` / `plugin2.h`）が必要です。
 
+AviUtl2 SDK は AviUtl 作者の配布ページから入手できます:
+
+- ページ: <https://spring-fragrance.mints.ne.jp/aviutl/>
+- 直接DL: <https://spring-fragrance.mints.ne.jp/aviutl/aviutl2_sdk.zip>
+
+展開したフォルダ（`filter2.h` などがある場所）を `AVU2_SDK_DIR` に指定してください。
+
 ```bash
 # SDK と出力先を環境変数で指定
-set AVU2_SDK_DIR=C:\path\to\avu2-sdk
+set AVU2_SDK_DIR=C:\path\to\aviutl2_sdk
 set AVU2_PLUGIN_DIR=C:\ProgramData\aviutl2\Plugin   # 省略可
 
 xmake f -p windows -a x64 -m release

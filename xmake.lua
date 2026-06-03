@@ -4,6 +4,8 @@
 --   xmake build                            (サンプルをビルド)
 --
 -- AviUtl2 SDK が必要です（filter2.h / plugin2.h）。
+--   入手: https://spring-fragrance.mints.ne.jp/aviutl/
+--   直接: https://spring-fragrance.mints.ne.jp/aviutl/aviutl2_sdk.zip
 -- 環境変数で SDK / プラグイン出力先を指定してください:
 --   AVU2_SDK_DIR    … AviUtl2 SDK のパス（filter2.h などがある場所）
 --   AVU2_PLUGIN_DIR … ビルド後のコピー先（既定 C:/ProgramData/aviutl2/Plugin）
