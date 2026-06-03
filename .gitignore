@@ -1,0 +1,11 @@
+# xmake
+.xmake/
+build/
+
+# Build outputs
+*.aux2
+*.dll
+*.lib
+*.exp
+*.pdb
+*.obj

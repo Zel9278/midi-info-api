@@ -26,6 +26,25 @@ if (api->is_ok(an)) {
 api->release(an);                            // 必ず解放
 ```
 
+## サンプル
+
+`samples/api-sample/MidiApiSample.cpp` は、この API を使う独立した AviUtl2 プラグイン（`.aux2`）の最小例です。共有 MIDI から BPM・拍子・小節・ノート数などを取得して表示します。
+
+### ビルド
+
+[xmake](https://xmake.io) と AviUtl2 SDK（`filter2.h` / `plugin2.h`）が必要です。
+
+```bash
+# SDK と出力先を環境変数で指定
+set AVU2_SDK_DIR=C:\path\to\avu2-sdk
+set AVU2_PLUGIN_DIR=C:\ProgramData\aviutl2\Plugin   # 省略可
+
+xmake f -p windows -a x64 -m release
+xmake build
+```
+
+ビルドすると `MidiApiSample.aux2` が生成され、`AVU2_PLUGIN_DIR` にコピーされます。本体 `MidiInfoObject.aux2` と一緒に AviUtl2 へ入れ、`MIDI Source` で MIDI を読み込むと値が表示されます。
+
 ## 互換方針
 
 - 関数テーブル `MidiInfoAPI` は **末尾追加のみ**（並び替え・削除はしない）。
